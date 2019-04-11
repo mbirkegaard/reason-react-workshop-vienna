@@ -10,3 +10,7 @@ global(
 );
 
 global("ul", [padding(`px(0)), listStyleType(`none)]);
+
+global(".leaflet-container", [width(`vw(90.0)), height(`vh(90.0))]);
+
+global(".img", [width(`vw(20.0)), height(`vh(20.0))]);

@@ -30,6 +30,34 @@ Emotion.$$global("ul", /* :: */[
       ]
     ]);
 
+Emotion.$$global(".leaflet-container", /* :: */[
+      Emotion.width(/* `vw */[
+            26433,
+            90.0
+          ]),
+      /* :: */[
+        Emotion.height(/* `vh */[
+              26418,
+              90.0
+            ]),
+        /* [] */0
+      ]
+    ]);
+
+Emotion.$$global(".img", /* :: */[
+      Emotion.width(/* `vw */[
+            26433,
+            20.0
+          ]),
+      /* :: */[
+        Emotion.height(/* `vh */[
+              26418,
+              20.0
+            ]),
+        /* [] */0
+      ]
+    ]);
+
 export {
   
 }
