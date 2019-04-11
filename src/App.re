@@ -36,3 +36,14 @@ let make = (~initialMarkers=[]) => {
      |> ReasonReact.array}
   </Map>;
 };
+
+module Button = {
+  [@react.component]
+  let make = (~onClick, ~color) =>
+    <button onClick style={ReactDOMRe.Style.make(~color, ())} />;
+};
+
+module DangerButton = {
+  let make = Button.make;
+  let makeProps = Button.makeProps(~color="red");
+};
