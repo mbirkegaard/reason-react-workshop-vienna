@@ -19,6 +19,17 @@ Emotion.$$global("html", /* :: */[
       ]
     ]);
 
+Emotion.$$global(".leaflet-container", /* :: */[
+      Emotion.height(/* `pct */[
+            5591841,
+            100
+          ]),
+      /* :: */[
+        Emotion.fontFamily("'Arvo', serif"),
+        /* [] */0
+      ]
+    ]);
+
 Emotion.$$global("ul", /* :: */[
       Emotion.padding(/* `px */[
             25096,

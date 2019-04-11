@@ -9,4 +9,9 @@ global(
   ],
 );
 
+global(
+  ".leaflet-container",
+  [height(`pct(100.)), fontFamily("'Arvo', serif")],
+);
+
 global("ul", [padding(`px(0)), listStyleType(`none)]);
