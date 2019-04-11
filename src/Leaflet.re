@@ -3,8 +3,7 @@ type position = (float, float);
 module Map = {
   [@react.component] [@bs.module "react-leaflet"]
   external make:
-    (~center: position, ~zoom: float, ~children: React.element) =>
-    React.element =
+    (~center: position, ~zoom: int, ~children: React.element) => React.element =
     "Map";
 };
 
