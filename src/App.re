@@ -5,16 +5,20 @@ type action =
   | AddMarker(position)
   | RemoveMarker(string);
 
-let reducer = (state, action) => {
-  switch (action) {
-  | AddMarker((x, y)) => [{id: {j|$x:$y|j}, position: (x, y)}, ...state]
-  | RemoveMarker(id) => state |> List.filter(marker => marker.id != id)
-  };
-};
-
 [@react.component]
 let make = (~initialMarkers=[]) => {
-  let (state, dispatch) = React.useReducer(reducer, initialMarkers);
+  let (state, dispatch) =
+    React.useReducer(
+      (state, action) =>
+        switch (action) {
+        | AddMarker((x, y)) => [
+            {id: {j|$x:$y|j}, position: (x, y)},
+            ...state,
+          ]
+        | RemoveMarker(id) => state |> List.filter(marker => marker.id != id)
+        },
+      initialMarkers,
+    );
 
   <Map
     center=(0.0, 0.0)
